@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Legal Document</title>
+</head>
+<body id="paySection">
+This Game Requires a Dollar to Play. You must pay with either of the following credit card, paypal, direct deposit,
+souls, Cryptocurrency.
+
+<p id="noPaymentInput"></p>
+
+<div>Credit Card Number</div>
+<input id="ccn" type="number"/>
+
+<div>Paypal Number</div>
+<input id="ppn"type="number"/>
+
+<div>Direct Deposit Number</div>
+<input id="ddn" type="number"/>
+
+<div>DNA Code</div>
+<input id="dnac" type="text"/>
+
+<div>Cryptocurrency Wallet Number</div>
+<input id="cwn"type="text"/>
+<br/><br/>
+
+<input id="acceptedButton" type="button" value="Accept">
+
+<input id="declineButton" type="button" value="Decline">
+
+<script type="text/javascript">
+
+    // if(document.getElementById("ccn").value.length > 0 ||
+    //     document.getElementById("ppn").value.length > 0 ||
+    //     document.getElementById("ddn").value.length > 0 ||
+    //     document.getElementById("dnca").value.length > 0||
+    //     document.getElementById("cwn").value.length > 0)
+    // {
+        document.getElementById("acceptedButton").onclick = function () {
+            location.href = "gamePage.html";
+        };
+    // } else
+    //     document.getElementById("noPaymentInput").value = "Please enter a payment option";
+
+
+
+    document.getElementById("declineButton").onclick = function () {
+        location.href = "index.html";
+    };
+</script>
+</body>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<footer id="footer">Disclaimer: No refunds allowed, and also this is not a secure webpage.</footer>
+</html>

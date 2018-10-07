@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Betting Game</title>
+    <script type="text/javascript" src="../javaScript/game.js"></script>
+</head>
+<body>
+<input id="userInput" type="number" value="0" min="1" max="999"/>
+<input id="enterButton" type="button" value="Play Game" onclick="start()"/>
+<script>document.getElementById("enterButton").onclick = function() {playGame()};</script>
+<br/>
+<output id="displayOutput"></output>
+</body>
+</html>

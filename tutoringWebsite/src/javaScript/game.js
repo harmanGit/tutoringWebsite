@@ -1,22 +1,53 @@
-//To make your homepage interesting, provide a link to a page that allows the users to play a game. This game generates
-//integer between 0(inclusive) and 1000(exclusive) and prompts the user to enter an integer with at most 3 digits. This
-//game needs to user pay $1 to play. If the integer entered by the user matches the integer generated in any order, the
-//user wins $249 and s/he losses the $1 payed.
-
 function start() {
-    document.getElementById("enterButton").onclick = function() {playGame()};
+    document.getElementById("enterButton").onclick = function () {
+        playGame()
+    };
 }
 
 function playGame() {
     var userInput = document.getElementById("userInput").value;
 
-    if(parseInt(userInput) > 0 && parseInt(userInput) < 1000){
-        var randomNumber = Math.floor(Math.random() * 1000);//is this how long
-
-        if(parseInt(userInput) === Math.floor(Math.random() * 1000))//might be a BUG
-            document.getElementById("displayOutput").innerHTML = "You Win!!!";
-        else
-            document.getElementById("displayOutput").innerHTML = "You Lose!!! The Winning Number Was: " + randomNumber;
+    if (parseInt(userInput) >= 0 && parseInt(userInput) < 1000) {
+        didUserWin(parseInt(userInput));
     } else
         document.getElementById("displayOutput").innerHTML = "Invalid Input! Try Again";
+}
+
+function didUserWin(userInput) {
+    var outputNumber = Math.floor(Math.random() * 1000);
+    var randomNumber = outputNumber;
+    var partialRandomNumber;
+    var partialUserInput;
+    var userInputArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var randomNumberArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+    for (var i = 0; randomNumber > 0; i++) {
+        partialRandomNumber = randomNumber % 10;
+        randomNumber = Math.floor(randomNumber / 10);
+
+        randomNumberArray[partialRandomNumber]++;
+    }
+    for (var i = 0; userInput > 0; i++) {
+
+        partialUserInput = userInput % 10;
+        userInput = Math.floor(userInput / 10);
+
+        userInputArray[partialUserInput]++;
+    }
+
+    if (userInputArray.toString() === randomNumberArray.toString()) {
+        document.getElementById("enterButton").disabled = true;
+        document.getElementById("displayOutput").innerHTML = "You Win $249!!! This amount will automatically be added to your account";
+        document.getElementById("redirecting").innerText = "Redirecting in 5 seconds...";
+        setTimeout(function () {
+            window.location = 'index.html'
+        }, 5000);
+    } else {
+        document.getElementById("enterButton").disabled = true;
+        document.getElementById("displayOutput").innerHTML = "You Lose!!! The Winning Number Was: " + outputNumber;
+        document.getElementById("redirecting").innerText = "Redirecting in 5 seconds...";
+        setTimeout(function () {
+            window.location = 'index.html'
+        }, 5000);
+    }
 }

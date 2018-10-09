@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Learning HTML</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
-<body>
+<body class="notes">
 
 <H2>HTML Tips</H2>
 
-
-<dl>
-    <dt>HTML</dt>
-    <dd>HTML is the acronym of Hyper Text Markup Language which is a language for specifying the content
-        and structure of a web page.</dd>
-</dl>
+HTML is the acronym of Hyper Text Markup Language which is a language for specifying the content and structure of a web
+page.
 
 <ul>
     <li>In HTML5, an HTML document should start with <code> &lt;!DOCTYPE HTML&gt; </code></li>
-
+    <br>
     <li>
         The Head should contain
         <ol>
-            <li>Title - Gives a title and maximizes the find-ability of the page by search engines </li>
-            <li>Style - Defines an internal CSS sheet </li>
+            <li>Title - Gives a title and maximizes the find-ability of the page by search engines</li>
+            <li>Style - Defines an internal CSS sheet</li>
             <li>Link - Links this page with an external CSS document</li>
-            <li>Title - Gives information about this page so its maximizes its find-ability by search engines </li>
+            <li>Title - Gives information about this page so its maximizes its find-ability by search engines</li>
         </ol>
-    <li>The body can contain all the other elements of an HTML document like text, images, links, etc. </li>
-
+        <br>
+    <li>The body can contain all the other elements of an HTML document like text, images, links, etc.</li>
+    <br>
     <li>The footer can contain elements like authorship, copyright, contact and etc.</li>
-
+    <br>
     <li>
         Useful HTML Tags
         <ul>
@@ -45,7 +43,8 @@
             <li>
                 <dl>
                     <dt>&lt;body&gt; == used for the body of the html page</dt>
-                    <dd><code>&lt;body id="body"&gt; &lt;div&gt;welcome to my webpage &lt;/div&gt; &lt;/body&gt;</code></dd>
+                    <dd><code>&lt;body id="body"&gt; &lt;div&gt;welcome to my webpage &lt;/div&gt; &lt;/body&gt;</code>
+                    </dd>
                 </dl>
             </li>
 
@@ -71,7 +70,9 @@
             </li>
             <li>
                 <dl>
-                    <dt>&lt;h1&gt; -&gt; &lt;h6&gt; == Heading tag, H1 is the biggest and it goes down in size...H2, H3, H4, H5, H6</dt>
+                    <dt>&lt;h1&gt; -&gt; &lt;h6&gt; == Heading tag, H1 is the biggest and it goes down in size...H2, H3,
+                        H4, H5, H6
+                    </dt>
                     <dd><code>&lt;h1&gt;Big HEADING text yayyy!&lt;/h1&gt;</code></dd>
                 </dl>
             </li>
@@ -96,7 +97,8 @@
             <li>
                 <dl>
                     <dt>&lt;img&gt; == the image tag, used to place images into your webpage</dt>
-                    <dd><code>&lt;img src = “immaImage.jpeg” alt = “If you see this the image tag is broken” width = “100” height=”100” &gt;</code></dd>
+                    <dd><code>&lt;img src = “immaImage.jpeg” alt = “If you see this the image tag is broken” width =
+                        “100” height=”100” &gt;</code></dd>
                 </dl>
             </li>
             <li>
@@ -122,17 +124,130 @@
                     <dt>&lt;dl&gt; == the definition tag, each item has another item in front of it</dt>
                     <dt>&lt;dt&gt; == definition of the item</dt>
                     <dt>&lt;dd&gt; == defines a item for the definition</dt>
-                    <dd><code>&lt;dl&gt;&lt;dt&gt;Definition Name&lt;/dt&gt;&lt;dd&gt;Item that defines the definition&lt;/dd&gt;&lt;/dl&gt;</code></dd>
+                    <dd><code>&lt;dl&gt;&lt;dt&gt;Definition Name&lt;/dt&gt;&lt;dd&gt;Item that defines the definition&lt;/dd&gt;&lt;/dl&gt;</code>
+                    </dd>
                 </dl>
             </li>
         </ul>
 
-    <li>add more stuff</li>
-
+    <li>
+        <dl>
+            <dt>The ID attribute can be used in any tag define a point. The value of the ID attribute of a tag must be
+                unique.You may use an anchor tag to link a point in a page to another point in the page.
+            </dt>
+            <dd><code>&lt;a href="https://www.w3schools.com"&gt;www.google.com&lt;/a&gt;</code></dd>
+        </dl>
     </li>
 
-</li>
+    </li>
+    <li>
+        Form and Input Tags
+        <ul>
+            <li>An input element allows the viewer to enter data into the page and a form connects the user to a
+                server
+            </li>
+            <li>
+                <dl>
+                    FROM tag has two attributes
+                    <dt>Action → its value specifies the url of the server where the data is sent to</dt>
+                    <dt>Method → its value can either be GET or POST.</dt>
+                    <dd>Get = The data is appended to the url and sent to the server.</dd>
+                    <dd><code>&lt;form action="/action_page.php" method="get"&gt;</code></dd>
+                    <dd>Post = The data in the form is packaged in a file and then sent to the server</dd>
+                    <dd><code>&lt;form action="/action_page.php" method="post"&gt;</code></dd>
+                </dl>
+            </li>
 
+            <li>
+                <dl>
+                    INPUT tag elements
+                    <dt>Type → its value specifies what type this element is. Some possible values can be</dt>
+                    <dd>Example --><code>&lt;input type="text"/&gt;</code> or <code> &lt;input
+                        type="password"/&gt;</code></dd>
+                    <dd>Text</dd>
+                    <dd>Hidden</dd>
+                    <dd>Submit</dd>
+                    <dd>Reset</dd>
+                    <dd>Checkbox</dd>
+                    <dd>Radio</dd>
+                    <dd>Button</dd>
+                </dl>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        Sample code of ordered list nested inside unordered list
+        <pre>
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;List Number 1&lt;/strong&gt;
+                    &lt;ol&gt;
+                        &lt;li&gt;item one in list 1&lt;/li&gt;
+                        &lt;li&gt;item two in list 1&lt;/li&gt;
+                    &lt;/ol&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;strong&gt;List Number 2&lt;/strong&gt;
+                    &lt;ol&gt;
+                        &lt;li&gt;item one in list 2&lt;/li&gt;
+                        &lt;li&gt;item two in list 2&lt;/li&gt;
+                    &lt;/ol&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        </pre>
+    </li>
+
+    <li>
+        Sample code of creating a point by giving a value to the id attribute in an element
+        and then using an anchor and its href attribute to reference this point
+        <pre>
+            &lt;p id="top"&gt; This is the first line of the page&lt;/p&gt;
+            &lt;a href="#top"&gt; Click to go back to the first line&lt;/a&gt;
+        </pre>
+    </li>
+
+    <li>
+        Sample code of the HTML for the home page
+        <pre>
+            &lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tutoring website&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" type="text/css" href="../css/main.css"&gt;
+&lt;/head&gt;
+&lt;header id="header"&gt;
+    Harman's Tutoring Website For HTML and CSS!
+&lt;/header&gt;
+
+&lt;body class="body"&gt;
+&lt;center&gt;&lt;img id="flowerImage" src="../img/flower.jpg" alt="Image link is broken" width="500px" height="500px"&gt;&lt;/center&gt;
+
+&lt;table id="tableOfContents" style="font-size: 175%" align="center"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Table of Contents&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; *&lt;A class="links" href="htmlPage.html" style="font-size: 80%"&gt;HTML Start Guide&lt;/A&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; *&lt;A class="links" href="cssPage.html" style="font-size: 80%"&gt;CSS Start Guide&lt;/A&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt; *&lt;A class="links" href="dollarPage.html" style="font-size: 80%"&gt;Play a Quick Game&lt;/A&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p id="headerDescription"&gt; Hello fellow websters! Interested in learning how to create your own webpages?!
+    Well ya came to the write play. The best languages to learn first are HTML and CSS. HTML is the acronym of
+    Hyper Text Markup Language which is a language for specifying the content and structure of a web page.
+    CSS is the acronym of Cascading Style Sheets which is used to style the contents of a webpage.
+    This website will be a key resource in getting the basics down for HTML and CSS.
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
     </li>
 </ul>
 </body>

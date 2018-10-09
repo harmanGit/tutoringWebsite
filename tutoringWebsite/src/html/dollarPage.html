@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Legal Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
-<body id="paySection">
-This Game Requires a Dollar to Play. You must pay with either of the following credit card, paypal, direct deposit,
-souls, Cryptocurrency.
+<body class="gameBody">
+This Game Requires a Dollar to Play. You must pay with either of the following Credit Card, Paypal, Direct Deposit,
+Soul, Cryptocurrency.
 
 <p id="noPaymentInput"></p>
 
@@ -14,7 +15,7 @@ souls, Cryptocurrency.
 <input id="ccn" type="number"/>
 
 <div>Paypal Number</div>
-<input id="ppn"type="number"/>
+<input id="ppn" type="number"/>
 
 <div>Direct Deposit Number</div>
 <input id="ddn" type="number"/>
@@ -23,7 +24,7 @@ souls, Cryptocurrency.
 <input id="dnac" type="text"/>
 
 <div>Cryptocurrency Wallet Number</div>
-<input id="cwn"type="text"/>
+<input id="cwn" type="text"/>
 <br/><br/>
 
 <input id="acceptedButton" type="button" value="Accept">
@@ -32,19 +33,18 @@ souls, Cryptocurrency.
 
 <script type="text/javascript">
 
+    //Checking for user input
     // if(document.getElementById("ccn").value.length > 0 ||
     //     document.getElementById("ppn").value.length > 0 ||
     //     document.getElementById("ddn").value.length > 0 ||
     //     document.getElementById("dnca").value.length > 0||
     //     document.getElementById("cwn").value.length > 0)
     // {
-        document.getElementById("acceptedButton").onclick = function () {
-            location.href = "gamePage.html";
-        };
+    document.getElementById("acceptedButton").onclick = function () {
+        location.href = "gamePage.html";
+    };
     // } else
     //     document.getElementById("noPaymentInput").value = "Please enter a payment option";
-
-
 
     document.getElementById("declineButton").onclick = function () {
         location.href = "index.html";
@@ -53,7 +53,6 @@ souls, Cryptocurrency.
 </body>
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<footer id="footer">Disclaimer: No refunds allowed, and also this is not a secure webpage.</footer>
+<br/><br/><br/><br/>
+<footer style="font-size: 12px">Disclaimer: No refunds allowed, and also this is not a secure webpage.</footer>
 </html>

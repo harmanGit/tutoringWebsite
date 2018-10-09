@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <title>Betting Game</title>
     <script type="text/javascript" src="../javaScript/game.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
-<body>
+<body class="gameBody">
+
+<p id="instructions">This game generates integer between 0(inclusive) and 1000(exclusive) and user needs to enter an
+    integer with at most 3 digits. If the integer entered by the user matches the integer generated in any order, the
+    user wins $249 and s/he losses the $1 payed.</p>
+
 <input id="userInput" type="number" value="0" min="1" max="999"/>
 <input id="enterButton" type="button" value="Play Game" onclick="start()"/>
-<script>document.getElementById("enterButton").onclick = function() {playGame()};</script>
 <br/>
 <output id="displayOutput"></output>
+<p id="redirecting"></p>
+<script type="text/javascript">
+    document.getElementById("enterButton").onclick = function () {
+        playGame()
+    };
+</script>
 </body>
 </html>

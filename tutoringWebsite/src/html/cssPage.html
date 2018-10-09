@@ -3,8 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <title>Learning CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
-<body>
+<body class="notes">
+<H2>CSS Tips</H2>
+CSS is the acronym of Cascading Style Sheets which is used to style a webpage.
+<ul>
+    <li> Syntax for a CSS statement is Property:Value;
+        <ul>
+            <li>Property Name: Font Family || Value: Font names || Code: font-family: arial;</li>
+            <li>Property Name: Font-size || Value: numericValuepx or numericValue followed by px or % or cm or in ||
+                Code:
+                font-size: 120px
+            </li>
+            <li>Property Name: Color || Value: rgb(xxx,xxx,xxx) or #xxxxxx color or default colors || Code: color:red;
+            </li>
+        </ul>
+    </li>
+    <br>
+    <li>
+        Three Levels of CSS
+        <ol>
+            <li>Inline --> Use the HTML style attribute to declare an individual element's style and overrides
+                and other styles related to this element so an inline style has the highest priority
+            </li>
+            <li>Embedded Style Sheet -->Places a css document in an HTML document's head section</li>
+            <li>External Style Sheet --> Saves a css document in a file with postfix .css and links it to this page
+                by using the link element in the head section.
+            </li>
+        </ol>
+    </li>
+    <br>
+    <li>
+        Three Kinds of Selectors
+        <ol>
+            <li>HTML selector --> htmlElementName{css statements}</li>
+            <li>Class selector --> .className{css statements}</li>
+            <li>ID selector --> #IDValue{css statements}</li>
+        </ol>
+    </li>
+    <br>
+    <li>
+        Pseudo-Class
+        <ul>
+            <li>Basic Layout --> <code>:className{css_statements} </code>
+                <ul>
+                    <li>Example: div::first-child{color:red;}</li>
+                </ul>
+            </li>
+            <li>:hover ⇒ used to style the content of an element when the mouse is hovering over it</li>
+            <li>:active ⇒ used to select and style the active elements</li>
+            <li>:link ⇒ used to style unvisited links</li>
+            <li>:visited ⇒ used to style links that have been visited</li>
+            <li>:first-child⇒ select the element that is the first child (in nest) of its paragraph</li>
+            <li>::first-letter ⇒ selects the first letter of this element</li>
+            <li>::before ⇒ insert content before the content of the element</li>
+            <li>::after ⇒ insert content after this element</li>
+        </ul>
+    </li>
+    <br>
+
+    <li>
+        Group selectors
+        <ul>
+            <li>.headline, .subline, .infotext {font-family:arial; color:pink};</li>
+            <li>.headline{font-size: 50px}</li>
+            <li>.subline{font-size: 35px}</li>
+            <li>.infotext{font-size:50px;}</li>
+        </ul>
+    </li>
+    <br>
+
+
+    <li>
+        Content Dependant Selectors
+        <ul>
+            <li>B I{font-size:20pt; color:green;}</li>
+            <ul>
+                <li>The property is applied to tag B when it is child of an I tag</li>
+                <li>The property is applied to a test2 class tag when it is a child of B tag</li>
+            </ul>
+        </ul>
+    </li>
+    <br>
+
+    <li>
+        List of CSS Properties
+
+        <ul>
+            <li>Font property can have several values
+                <ul>
+                    <ul>
+                        <li>font-style : normal or italic or oblique</li>
+                        <li>font-variant: unicase or all-small-caps</li>
+                        <li>font-weight: normal, bold, bolder, lighter 100-900</li>
+                        <li>font-size:
+                            <ul>
+                                <il>absolute length: XXpt or XXpx or XXin or XXcm</il>
+                                <il>predefined values: normal, xx-small, x-small, small, medium, large, x-large,
+                                    xx-large
+                                </il>
+                                <il>relative length: smaller larger</il>
+                                <il>percentage: 75%</il>
+
+                            </ul>
+                        </li>
+                        <li>font-family: arial or etc.</li>
+
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li>Text property can have several values
+                <ul>
+                    <ul>
+                        <li>Line-height: normal, number, length, %, initial, inherit</li>
+                        <li>Text-decoration:underline or overline or etc.</li>
+                        <li>Text-transform: alters the first letter
+                            <ul>
+                                <il>Uppercase → alters all the letters</il>
+                                <il>Lowercase → alters all the letters</il>
+                            </ul>
+                        </li>
+                        <li>Text-align: left, center, right justify</li>
+                        <li>Text-indent: length percentage of the length of the line</li>
+                        <li>White-space: normal renders one space no matter how many spaces you provide between two
+                            words
+                            <ul>
+                                <il>Pre --> keeps the white spaces you provide in the content</il>
+                            </ul>
+                        </li>
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <ul>
+        <li>Color Properties
+            <ul>
+                <ul>
+                    <li>color: rgb(xxx,xxx,xxx) or #xxxxxx color or default colors</li>
+                    <li>background-color: rgb(xxx,xxx,xxx) or #xxxxxx color or default colors</li>
+                    <li>background-image: url("immaImage.jpeg");
+                        <ul>
+                            <il>Uppercase → alters all the letters</il>
+                            <il>Lowercase → alters all the letters</il>
+                        </ul>
+                    </li>
+                    <li>background-repeat: repeat -x or repeat -y or repeat</li>
+                    <li>background-position: left top, left center, left bottom, right top, right center, right bottom
+                        center top, center center, center bottom
+                    </li>
+                </ul>
+            </ul>
+        </li>
+    </ul>
+    </li>
+    <br>
+    <li>
+        Sample code for a inline CSS
+        <ul>
+            <li>&lt;div style="font-size:24pt; font-weight:bold;"&gt; This is an example for inline CSS style &lt;/div&gt;
+            </li>
+        </ul>
+    </li>
+    <br>
+    <li> Sample of all the CSS code for this website
+        <pre>html{
+    background-color: #7cc4ff;
+    color: floralwhite;
+    font-family: "Calibri Light";
+    padding-left: 7em;
+    padding-right: 7em;
+
+}
+
+#header {
+    font-size: 5em;
+    text-align: center;
+    color: floralwhite;
+}
+
+.body {
+    background: lightsalmon;
+    border: solid #a1deff;
+}
+
+#headerDescription{
+    padding-left: 10em;
+    padding-right: 10em;
+    font-size: 1.2em;
+
+}
+
+#flowerImage{
+    padding-top: 2em;
+    padding-bottom: 1em;
+
+}
+
+#tableOfContents{
+    border: solid floralwhite;
+}
+
+.notes{
+    font-size: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: lightsalmon;
+    border: solid #a1deff;
+}
+
+.gameBody{
+    text-align: center;
+    font-size: 1.5em;
+    background: lightsalmon;
+    border: solid #a1deff;
+}
+
+.links{
+    text-align: center;
+    color: floralwhite;
+}
+
+        </pre>
+    </li>
+
+
+</ul>
 
 </body>
 </html>

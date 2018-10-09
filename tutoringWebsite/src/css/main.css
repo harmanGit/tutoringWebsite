@@ -1,10 +1,56 @@
-#header {
-    text-align: center;
-    color: blue;
+html {
+    background-color: #7cc4ff;
+    color: floralwhite;
+    font-family: "Calibri Light";
+    padding-left: 7em;
+    padding-right: 7em;
+
 }
 
-#footer {
-    flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-    padding: 20px;
-    color: blue;
+#header {
+    font-size: 5em;
+    text-align: center;
+    color: floralwhite;
+}
+
+.body {
+    background: lightsalmon;
+    border: solid #a1deff;
+}
+
+#headerDescription {
+    padding-left: 10em;
+    padding-right: 10em;
+    font-size: 1.2em;
+
+}
+
+#flowerImage {
+    padding-top: 2em;
+    padding-bottom: 1em;
+
+}
+
+#tableOfContents {
+    border: solid floralwhite;
+}
+
+.notes {
+    font-size: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: lightsalmon;
+    border: solid #a1deff;
+}
+
+.gameBody {
+    text-align: center;
+    font-size: 1.5em;
+    background: lightsalmon;
+    border: solid #a1deff;
+}
+
+.links {
+    text-align: center;
+    color: floralwhite;
 }
